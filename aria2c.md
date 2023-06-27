@@ -22,3 +22,27 @@ RestartSec=10
 
 Run service
 `sudo systemctl enable --now aria2-deamon-rpc.service`
+
+
+/home/ubuntu/aria2c/aria2.conf
+
+```
+continue
+dir=/home/ubuntu/downloads/
+file-allocation=falloc
+log-level=error
+max-connection-per-server=10
+summary-interval=120
+daemon=true
+enable-rpc=true
+rpc-listen-port=6800
+rpc-listen-all=true
+max-concurrent-downloads=20
+disable-ipv6=true
+disk-cache=25M
+timeout=600
+retry-wait=30
+max-tries=50
+save-session=/home/ubuntu/aria2c/aria2.session
+save-session-interval=10
+```
